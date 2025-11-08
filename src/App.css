@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+  --background-color:#121215;
+  --text-light:#fff;
+}
+body {
+  background-color: var(--background-color);
+  font-family: "Outfit", sans-serif;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+input#searchField {
+    height: 40px;
+    border: 0px;
+    outline: 0px;
+    padding: 5px;
+    width: 80%;
+    margin: 0 auto;
+        border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+input#submitBtn {
+    background-color: #174f38;
+    padding: 8px 15px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.PlayArea {
+    width: 50%;
+    margin: 0 auto;
+}
+div#weatherData h2 {
+    font-size: 21px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.textGdta {
+    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+@media screen and (min-width: 320px) and (max-width: 992px) { 
+  .PlayArea {
+    width: 100%;
+  }
+  input#searchField {
+    height: 40px;
+    border: 0px;
+    outline: 0px;
+    padding: 5px;
+    width: 100%;
+    margin: 0 auto;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    position: relative;
+  }
+  input#submitBtn {
+    position: absolute;
+    right: 30px;
+  }
+  .footerSection {
+    position: relative !important;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.footerSection {
+    position: fixed;
+    bottom: 0px;
+        width: 100%;
+        left: 0px;
+}
+.footerSection.bg-white.py-8 {
+    position: absolute;
+    bottom: 0px;
+}
+
+.footerContact {
+    text-align: center;
+    width: 100%;
+}
+
+.ColFour.md\:w-1\/4 {
+    margin: 0 auto;
+}
+
+.footerSection ul.flex.gap-5.mt-5 {
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+@media screen and (min-width: 320px) and (max-width: 1218px) { 
+input#searchField {
+    width: 100%;
+    position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input#submitBtn {
+    position: absolute;
+}
 }
